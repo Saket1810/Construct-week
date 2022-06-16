@@ -6,43 +6,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <style>
-        *{
-          margin:0px;
-          padding:0px;
-          box-sizing:border-box;  
+         *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
         }
-        body{
-            background-color: white;
-        }
-        div {
-            background-color: white;
-            width:70%;
-            margin:auto;
-            padding:10%;
-        }
-        input,button{
-            width:100%;
-            font-size:20px;
-            display:block;
-            margin-top:5px;
 
+        /* navbar css */
+        #navbar {
+             width:100% ;
+            
+            height: 40px;
+            display:flex;
+            background-color: rgb(15, 15, 15);
+            justify-content:space-between
         }
-        button {
-            width:20%;
-            background-color: rgb(96, 96, 172);
-            color:white
+
+        #navbar >div {
+            display:flex;
+            justify-content: center;
+            align-items:center;
         }
+        
+        #navbar > div:first-child {
+            width:10%;
+            height:100%;
+            color:white;
+            margin-left: 40px;
+            cursor: pointer;
+            
+        
+        }
+
+        #navbar >div:last-child {
+            width:10%;
+            height:100%;
+        }
+
+        #navbar > div > h3 {
+            text-align: center;
+            font-size:10px;
+            
+        }
+
+        /* navbar css ends */
+        #container{
+        width: 50%;
+        margin:auto;
+        text-align: center;
+      }  
+      #main{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        margin: auto;
+      }
+      #main>button{
+        margin: auto;
+      }
+      #main>button img{
+        width: 100%;
+        height: 50px;
+      }
+      #byemail>input{
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        
+      }
+      #remember{
+        display: flex;
+       
+      }
+      #forgot{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+      }
+      #submit{
+        width: 50%;
+        padding: 10px;
+        background-color: #2369d6;
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+        border-color: transparent;
+      }
+      
+    
 
     </style>
 </head>
 <body>
-    <div>
-        <form>
-            <input placeholder="Enter Your Email/Mobile" id="email" type="text">
-            <input placeholder="Password" id="password" type="password">
-            <button id="login">Log in</button>
-        </form>
+    <div id="navbar">
+        <div>
+            <h3> Back to India Today</h3>
+        </div>
+        <div>
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="Error"/>
+        </div>
     </div>
+
+    <div id="container">
+        <h1>Sign In To India Today</h1>
+        <p>Don't have an account?Sign Up Now »</p>
+        <div id="main">
+            <button>
+                <img src="https://img.icons8.com/fluency/344/twitter-squared.png" alt="">
+            </button>
+            <button>
+                <img src="https://img.icons8.com/color/452/facebook.png"
+            </button>
+            <button>
+                <img src="https://img.icons8.com/fluency/344/google-logo.png"
+            </button>
+
+        </div>
+        <form>
+            <h4>Or Sign In using your Email or Mobile no.</h4>
+            <div id="byemail">
+                <input id="email" type="email" placeholder="Enter Your Email/Mobile">
+                <input id="password" type="password" placeholder="Enter Your Password">
+            </div>
+           
+            <div id="remember">
+               <input type="checkbox" name="remember"> <lable for="sacales">REMEMBER ME</lable>
+             
+            </div>
+            <div id="forgot">
+                <div>
+                    forgot password?
+                </div>
+                <div>
+                    
+               Login via OTP
     
+                </div>
+               
+            </div>
+            <input id="submit" type="submit" name="Login" value="login">
+        </div>
+        </form>
+      
 </body>
+   
 </html>
+
+<script>
+    let form = document.querySelector("form");
+    let userData =JSON.parse(localStorage.getItem("userData"))||[] ;
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkEmails(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+        } else {
+            alert("Account Already Exists");
+        }
+        
+    })
+
+    function checkEmails(email) {
+      let filtered =userData.filter(function(element){
+        return email ===element.email;
+      })
+      if(filtered.length >0)
+      {
+        return false ;
+      } else {
+        return true;
+      }
+    }
+</script>
