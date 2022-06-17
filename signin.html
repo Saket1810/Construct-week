@@ -161,25 +161,26 @@
             email:form.email.value,
             password:form.password.value,
         }
-        if(checkEmails(data.email)===true){
+        if(checkSignin(data.email,data.password)===true){
             userData.push(data);
-            localStorage.setItem("userData",JSON.stringify(userData));
+            localStorage.setItem("signin",JSON.stringify(userData));
             alert("Log in Successfully");
         } else {
-            alert("Account Already Exists");
+            alert("Wrong Username or Password");
         }
         
     })
 
-    function checkEmails(email) {
+    function checkSignin(email,password) {
       let filtered =userData.filter(function(element){
-        return email ===element.email;
+        return element.email === email &&
+        element.password ===password
       })
       if(filtered.length >0)
       {
-        return false ;
+        return true ;
       } else {
-        return true;
+        return false;
       }
     }
 </script>

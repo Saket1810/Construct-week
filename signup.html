@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #navbar {
+            width: 100%;
+
+            height: 40px;
+            display: flex;
+            background-color: rgb(15, 15, 15);
+            justify-content: space-between
+        }
+
+        #navbar>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #navbar>div:first-child {
+            width: 10%;
+            height: 100%;
+            color: white;
+            margin-left: 40px;
+            cursor: pointer;
+
+
+        }
+
+        #navbar>div:last-child {
+            width: 10%;
+            height: 100%;
+        }
+
+        #navbar>div>h3 {
+            text-align: center;
+            font-size: 10px;
+
+        }
+
+        #container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        #main {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            
+        }
+
+        #main>button {
+            margin: auto;
+            width: 170px;
+            display: flex;
+            
+
+        }
+        #main> button >h3 {
+            padding-top: 10px;
+        }
+
+        #main>button img {
+            width: 100%;
+            height: 40px;
+
+        }
+
+        #byemail {
+            width: 50%;
+            padding: 10px;
+            margin: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 100%);
+            grid-template-rows: repeat(2, 40px);
+            gap: 40px 30px;
+
+
+        }
+
+        #checkbox {
+            display: flex;
+            padding-bottom: 50px;
+
+
+
+        }
+
+        #forgot {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            border: 1px solid transparent;
+            width: 55%;
+            margin: auto;
+        }
+
+        #forgot>div {
+            border: 1px solid transparent;
+            margin-bottom: 35px;
+            height: auto;
+        }
+
+        #submit {
+            width: 30%;
+            padding: 10px;
+            background-color: #1a85bf;
+            color: white;
+            font-size: 20px;
+            border-radius: 5px;
+            border-color: transparent;
+        }
+
+        #bottom {
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px solid transparent;
+            height: 110px;
+            width: 55%;
+            padding-top: 20px;
+            margin: auto;
+            background-color: rgba(204, 197, 197, 0.904);
+            justify-content: space-around;
+
+        }
+        
+
+        #bottom>div {
+            border: 1px solid transparent;
+            height: 70px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            padding-top: 15px;
+        }
+
+        #bottom>:first-child {
+            padding-top: 15px;
+            height: 70px;
+            background-color: rgba(204, 197, 197, 0.904);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div>
+            <h3> Back to India Today</h3>
+        </div>
+        <div>
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="Error" />
+        </div>
+    </div>
+
+    <div id="container">
+        <p>Sign Up by</p>
+
+        <div id="main">
+            <button>
+                <img src="https://img.icons8.com/fluency/344/twitter-squared.png"  alt="" >
+                <h3>Twitter</h3>
+            </button>
+            <button>
+                <img src="https://img.icons8.com/color/452/facebook.png " alt="">
+                <h3>Facebook</h3>
+            </button>
+            <button>
+                <img src="https://img.icons8.com/fluency/344/google-logo.png" alt="">
+                <h3>Google</h3>
+            </button>
+        </div>
+        <p>OR</p>
+        <p>Sign Up using your Email Id/Mobile No.</p>
+        <form>
+            <!-- <h4>Or Sign In using your Email or Mobile no.</h4> -->
+            <div id="byemail">
+                <select name="country" id="country">
+                    <option value="country">India</option>
+                    <option value="country">Iran</option>
+                    <option value="country">Japan</option>
+                    <option value="country">Italy</option>
+                    <option value="country">Iran</option>
+                    <option value="country">Mexico</option>
+                    <option value="country">Monaco</option>
+                    <option value="country">New Zealand</option>
+                    <option value="country">Pakisthan</option>
+                    <option value="country">Nepal</option>
+                    <option value="country">Turkey</option>
+                </select>
+
+                <input id="name" type="text" placeholder="Enter Your Full Name">
+                <input id="email" type="email" placeholder="Enter Your Email/Mobile">
+                <input id="password" type="password" placeholder=" * Password">
+            </div>
+
+            <div id="checkbox">
+                <input type="checkbox" name="a">
+                <lable for="sacales">I agree to the SSD login privacy terms and I warrant that I am above 16 Years of
+                    age * </lable>
+                <input type="checkbox" name="b"> <label for="sacales">I agree to the processing of my personal
+                    information for profiling such as My credits,Follow activity .Personalised recommendations annd
+                    Advertisements.</label>
+                <input type="checkbox" name="c"><label for="sacales">I wish to receive custom communication i.e Emails
+                    newsletters,SMS ,notifivations from India Today based on my interests and my activities on the
+                    websites.</label>
+            </div>
+
+            <input id="submit" type="submit" name="Sign" value="Sign Up">
+    </div>
+    <div id="forgot">
+        <div>
+            *Mandatory Fields
+        </div>
+        <div>
+
+            Already Register ? Sign in »*
+
+        </div>
+
+    </div>
+    </form>
+    <div id="bottom">
+        <div>
+            <h3>One Network One Account</h3>
+        </div>
+        <div>
+            <img src="https://smedia2.intoday.in/aajtak/aajtakhd/images/aajtakHd_logo.png?bypass=true" alt="Error">
+        </div>
+        <div>
+            <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?576" alt="Error">
+        </div>
+        <div>
+            <img src="https://akm-img-a-in.tosshub.com/sites/btmt/businesstoday/resources/css/images/btnav-newlogo.png?size=48:21"
+                alt="Error">
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+     let form = document.querySelector("form");
+    let userData =JSON.parse(localStorage.getItem("userData"))||[] ;
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkEmails(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+            alert("Sign up Successfully");
+            window.location.href="signin.html";
+        } else {
+            alert("Account Already Exists");
+        }
+        
+    })
+
+    function checkEmails(email) {
+      let filtered =userData.filter(function(element){
+        return email ===element.email;
+      })
+      if(filtered.length >0)
+      {
+        return false ;
+      } else {
+        return true;
+      }
+    }
+</script>
+
