@@ -59,17 +59,34 @@
 
         #main {
             display: flex;
-            width: 100%;
+            width: 97%;
             height: 40px;
+            border: 1px solid red;
             margin: auto;
             margin-top: 30px;
             margin-bottom: 30px;
+            justify-content: space-between;
             
         }
-
-        #main>button {
+         #main>div{
+            width: 30%;
+            height: auto;
+            border: 1px solid teal;
+            
+         }
+         #main>div> img{
+            width: 20%;
+            height: 50px;
+            padding-bottom: 10px;
+            display: flex;
+         }
+         #main>div div{
+           width: 20%;
+           height: 50px;
+         }
+        /* #main>button {
             margin: auto;
-            width: 170px;
+            width: 170p
             display: flex;
             
 
@@ -78,11 +95,11 @@
             padding-top: 10px;
         }
 
-        #main>button img {
+        #main>button img{
             width: 100%;
-            height: 40px;
+            height: 50px;
 
-        }
+        } */
 
         #byemail {
             width: 50%;
@@ -97,7 +114,7 @@
         }
 
         #checkbox {
-            display: flex;
+            display: -ms-inline-grid;
             padding-bottom: 50px;
 
 
@@ -156,6 +173,13 @@
             height: 70px;
             background-color: rgba(204, 197, 197, 0.904);
         }
+        #bottom>div>img {
+            width: 90px;
+            height:40px;
+            /* justify-content: center; */
+            align-items: center;
+            
+        }
     </style>
 </head>
 
@@ -173,7 +197,16 @@
         <p>Sign Up by</p>
 
         <div id="main">
-            <button>
+            <div><img src="https://img.icons8.com/fluency/344/twitter-squared.png"  alt="" >
+               <div> <h3>Twitter</h3></div>
+            </div>
+            <div> <img src="https://img.icons8.com/color/452/facebook.png " alt="">
+                <div><h3>Facebook</h3></div>
+            </div>
+            <div><img src="https://img.icons8.com/fluency/344/google-logo.png" alt="">
+              <div><h3>Google</h3></div>  
+            </div>
+            <!-- <button>
                 <img src="https://img.icons8.com/fluency/344/twitter-squared.png"  alt="" >
                 <h3>Twitter</h3>
             </button>
@@ -184,7 +217,7 @@
             <button>
                 <img src="https://img.icons8.com/fluency/344/google-logo.png" alt="">
                 <h3>Google</h3>
-            </button>
+            </button> -->
         </div>
         <p>OR</p>
         <p>Sign Up using your Email Id/Mobile No.</p>
@@ -212,13 +245,13 @@
 
             <div id="checkbox">
                 <input type="checkbox" name="a">
-                <lable for="sacales">I agree to the SSD login privacy terms and I warrant that I am above 16 Years of
-                    age * </lable>
+                <lable for="sacales">I agree to the SSO login privacy terms and I warrant that I am above 16 Years of
+                    age * </lable><br>
                 <input type="checkbox" name="b"> <label for="sacales">I agree to the processing of my personal
                     information for profiling such as My credits,Follow activity .Personalised recommendations annd
-                    Advertisements.</label>
+                    Advertisements.</label><br>
                 <input type="checkbox" name="c"><label for="sacales">I wish to receive custom communication i.e Emails
-                    newsletters,SMS ,notifivations from India Today based on my interests and my activities on the
+                    newsletters,SMS ,notifications from India Today based on my interests and my activities on the
                     websites.</label>
             </div>
 
