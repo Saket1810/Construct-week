@@ -164,6 +164,7 @@
         if(checkEmails(data.email)===true){
             userData.push(data);
             localStorage.setItem("userData",JSON.stringify(userData));
+            alert("Log in Successfully");
         } else {
             alert("Account Already Exists");
         }
