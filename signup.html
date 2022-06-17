@@ -256,3 +256,35 @@
 
 </html>
 
+<script>
+     let form = document.querySelector("form");
+    let userData =JSON.parse(localStorage.getItem("userData"))||[] ;
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkEmails(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+            alert("Sign up Successfully");
+        } else {
+            alert("Account Already Exists");
+        }
+        
+    })
+
+    function checkEmails(email) {
+      let filtered =userData.filter(function(element){
+        return email ===element.email;
+      })
+      if(filtered.length >0)
+      {
+        return false ;
+      } else {
+        return true;
+      }
+    }
+</script>
+
