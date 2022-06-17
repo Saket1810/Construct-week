@@ -1,0 +1,75 @@
+body{
+    width: 90%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#boxpage2{
+    display: grid;
+    grid-template-columns: 65% 32%;
+    gap: 20px;
+    margin-top: 40px;
+    justify-content: space-between;
+   
+}
+
+#boxpage2>div:first-child{
+    background-color: rgb(243, 243, 243);
+    padding: 0px 20px;
+
+    
+}
+#boxpage2>div:first-child>h3{
+    margin: 5px 0px;
+
+}
+
+#grid2page2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    gap: 25px 18px;
+ 
+}
+
+#grid2page2>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#grid2page2>div>div{
+    overflow: hidden;
+    width: 170px;
+    height: 96px;
+  
+}
+
+#grid2page2 h4{
+    margin: 0px 0px 0px 15px;
+    font-weight: 600;
+    font-size: 15px;
+}
+#boxpage2>div:last-child{
+    border: 1px solid rgb(202, 196, 196);
+    text-align: center;
+    line-height: 0;
+    font-size: 11px;
+    padding: 0px 25px 10px 25px;
+}
+
+#grid2page2 h4:hover{
+    color:rgb(69, 69, 150)
+}
+#grid2page2 h4:after {
+    content: url('https://drive.google.com/uc?id=1CzqG7RQ14eFqL-V7u_wn7OQuNOOzqGa7');
+    width: 5px;
+    height: 5px;
+}
+
+
+#grid2page2 img:hover{
+  transform: scale(1.2);
+}
+#grid2page2 img{
+   transition: .5s all ease-in-out;
+
+}
