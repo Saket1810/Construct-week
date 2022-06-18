@@ -54,3 +54,36 @@ advertisement={
     link:   "https://tpc.googlesyndication.com/simgad/849167651671082313"
 };
 
+
+
+// -----------------slider Javascript-----------------------//
+
+    let num=0;
+
+slideshow(num)
+    function slideshow(num){
+        let slides=document.getElementsByClassName("slide");
+        for(let key of slides){
+            key.style.display="none";
+        }
+        slides[num].style.display="block";
+    };
+
+    document.querySelector("#prev").addEventListener("click",function(){
+     
+        num--;
+        if(num==-1){
+            num=4;
+        }
+        slideshow(num);
+    });
+    document.querySelector("#next").addEventListener("click",function(){
+     
+        num++;
+        if(num==4){
+            num=0;
+        }
+        slideshow(num);
+    });
+
+   
