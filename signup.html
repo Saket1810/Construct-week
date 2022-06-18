@@ -1,322 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign Up, Your Account-India Today</title>
+    <link rel="icon" type="image/x-icon" href="https://auth.indiatoday.in/sites/all/themes/itg/favicon.ico">
+    <script src=""></script>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
+        body{
+            font-family: sans-serif;
         }
-
-        #navbar {
-            width: 100%;
-
-            height: 40px;
+        #navbar{
+            background-color: black;
             display: flex;
-            background-color: rgb(15, 15, 15);
-            justify-content: space-between
+            justify-content: space-between;
+            padding: 0 60px;
+            height: 50px;
+            /* align-items: center; */
         }
-
-        #navbar>div {
+        #navbar p{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #navbar>div>a{
             display: flex;
+            text-decoration: none;
+            color: #7f909f;
+            
+        }
+        #roundBtn{
+            display: flex;
+            align-items: center;
             justify-content: center;
+            width: 35px;
+            height: 35px;
+            border: 1px solid #7f909f;
+            border-radius: 50%;
+            text-align: center;
+            margin-top: 5px;
+            color: #7f909f;
+            margin-right: 8px;
+        }
+        #container{
+            width: 600px;
+            margin: auto;
+        }
+      
+        .icons{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 40px;
+            gap: 0px;
+            /* border: 1px solid red; */
             align-items: center;
         }
+      
+        .icons>div{
+            width: 96%;
 
-        #navbar>div:first-child {
-            width: 10%;
-            height: 100%;
-            color: white;
-            margin-left: 40px;
-            cursor: pointer;
-
-
-        }
-
-        #navbar>div:last-child {
-            width: 10%;
-            height: 100%;
-        }
-
-        #navbar>div>h3 {
-            text-align: center;
-            font-size: 10px;
-
-        }
-
-        #container {
-            width: 50%;
-            margin: auto;
-            text-align: center;
-            margin-top: 20px;
-
-        }
-
-        #main {
-            
-            display: flex;
-            width: 600px;
-            height: 40px;
-            
-            margin: auto;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            justify-content: space-between;
-            
-        }
-         #main>div{
-            width: 30%;
-            height: auto;
-            border: 1px solid grey;
-            display: flex;
-             align-items: center; 
-             border-radius: 5px;
-             
-            
-         }
-         #main>div:nth-child(1){
-            background-color: #1daee3;
-            color: white;
-         }
-         #main>div:nth-child(2){
-            background-color: #3b5998;
-            color: white;
-         }
-         #main>div:nth-child(3){
-            background-color: ;
-         }
-         #main>div> img{
-            width: 45px;
-            height: 47px;
-            
-            display: flex;
-            margin-top: -2px;
-            margin-left: -5px;
-         }
-         #main>div>h3{
-           
-           margin-left: 20px; 
-         }
-        /* #main>button {
-            margin: auto;
-            width: 170p
-            display: flex;
-            
-
-        }
-        #main> button >h3 {
-            padding-top: 10px;
-        }
-
-        #main>button img{
-            width: 100%;
-            height: 50px;
-
-        } */
-
-        #byemail {
-            width: 50%;
-            padding: 10px;
-            margin: 10px;
-            display: grid;
-            grid-template-columns: repeat(2, 100%);
-            grid-template-rows: repeat(2, 40px);
-            gap: 40px 30px;
-
-
-        }
-
-        #checkbox {
-            display: -ms-inline-grid;
-            padding-bottom: 50px;
-
-
-
-        }
-
-        #forgot {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px;
-            border: 1px solid transparent;
-            width: 55%;
-            margin: auto;
-        }
-
-        #forgot>div {
-            border: 1px solid transparent;
-            margin-bottom: 35px;
-            height: auto;
-        }
-
-        #submit {
-            width: 30%;
-            padding: 10px;
-            background-color: #1a85bf;
-            color: white;
-            font-size: 20px;
+            /* border: 1px solid red;  */
             border-radius: 5px;
-            border-color: transparent;
+           display: flex;
+           align-items: center;
+           color: white;
         }
-
-        #bottom {
-            display: flex;
-            justify-content: space-evenly;
-            border: 1px solid transparent;
-            height: 110px;
-            width: 55%;
-            padding-top: 20px;
-            margin: auto;
-            background-color: rgba(204, 197, 197, 0.904);
-            justify-content: space-around;
+        .icons img{
+            height: 40px;
+            /* width: 100%; */
+        }
+     
+        .tw {
+            background-color: #1daee3;
+        }
+        .fb{
+            background-color: #3b5998;
+        }
+        .gog{
+            background-color: #f1f1f1;
+            
+          
+        }
+        #goga{
+            color: black;
+        }
+        h2{
+            text-align: center;
+        }
+        hr{
+            display: inline;
 
         }
         
 
-        #bottom>div {
-            border: 1px solid transparent;
-            height: 70px;
-            background-color: aliceblue;
-            border-radius: 10px;
-            padding-top: 15px;
-        }
+    .toogle {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    background-color: #fff;
+}
 
-        #bottom>:first-child {
-            padding-top: 15px;
-            height: 70px;
-            background-color: rgba(204, 197, 197, 0.904);
-        }
-        #bottom>div>img {
-            width: 90px;
-            height:40px;
-            /* justify-content: center; */
-            align-items: center;
-            
-        }
-        #heading{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            margin: auto;
-            width: 320px;
-            height: 30px;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-        #heading hr{
-            width: 110px;
-            height: 0px;
-            margin-top: 20px;
-        }
-        #heading p{
-            margin-top: 10px;
-        }
+.toogle:after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 1px rgb(133, 125, 125);
+    position: absolute;
+    left: 0;
+    top: 25%;
+    z-index: 1;
+}
+
+.toogle>p{
+    background-color:#fbfbfb; 
+    /* Same as the parents Background */
+    width: auto;
+    display: inline-block;
+    z-index: 3;
+    padding: 0 20px 0 20px;
+    color: #85857b;
+    position: relative;
+    font-weight: lighter;
+    margin: 0;
+}
+#input{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+}
+input{
+    padding: 15px;
+    font-size: 16px;
+}
+select{
+    font-size: 16px;
+}
+#checkbox{
+    display: grid;
+    grid-template-columns: 20px 560px;
+    margin: 30px auto;
+    gap: 10px;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+    background-image: linear-gradient(#459bfc 50%, #1253bb 50%);
+    border: none;
+   height: 40px;
+   color: white;
+   font-size: 18px;
+   width: 30%;
+   border-radius: 5px;
+}
+#fields{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+#footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #e9e9e9;
+    align-items: center;
+    /* height: 60%; */
+    margin:0 auto 40px auto;
+    padding: 10px 10%;
+    font-size: 14px;
+    font-weight: 600;
+    
+}
+#footer img{
+    display: block;
+    width: 80%;
+    padding: 5px;
+    background-color: white;
+}
+#footer>div:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    /* border: 1px solid red; */
+
+}
+@media all and (max-width:768px) {
+    #input{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 20px 20px;
+    }
+    #container{
+        width: 100%;
+    }
+    select{
+        padding: 10px;
+    }
+}
+
 
     </style>
 </head>
-
 <body>
     <div id="navbar">
         <div>
-            <h3> Back to India Today</h3>
+            <a  href=""><p id="roundBtn"><</p><p>Back to the India Today</p></a> 
         </div>
         <div>
-            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="Error" />
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="">
         </div>
     </div>
 
     <div id="container">
-        <div id="heading">
-            <hr>
-            <p>Sign Up by</p>
-            <hr>
+       <div class="toogle"> <p> Sign Up By</p></div>
+
+       <div class="icons">
+        <div class="tw"><img src="https://img.icons8.com/fluency/344/twitter-squared.png" alt=""> Twitter</div>
+
+        <div class="fb"><img src="https://img.icons8.com/fluency/452/facebook.png" alt="">Facebook</div>
+
+        <div class="gog" id="goga"><img src="https://img.icons8.com/fluency/344/google-logo.png" alt=""> Google</div>
+       </div>
+       <h2>OR</h2>
+
+       <div class="toogle"> <p> Sign Up Using your Email Id/Mobile No.</p></div>
+
+       <div id="form">
+       <form action="">
+        <div id="input">
+        <select name="" id="selectTag">
+            <option value="India">India</option>
+            <option value="Greese">Greese</option>
+            <option value="Congo">Congo</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Russia">Russia</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Nepal">Nepal</option>
+            <option value="BanglaDesh">BanglaDesh</option>
+            <option value="China">China</option>
+            <option value="America">America</option>
+        </select>
+        <input id="name" placeholder="Enter Your Full Name" type="text">
+       
+        <input id="email" placeholder="Enter Your Email or Mobile" type="email">
+        <input id="password" placeholder="* Pasword" type="password">
+    </div>
+        <div id="checkbox">
+            <div> <input type="checkbox" name="" id="chk1"> </div>
+            <div>I agree to the <a href="http://" target="_blank" rel="noopener noreferrer">SSO login privacy terms </a> and I warrant that I am above 16 years of age. *</div>
+            <div><input type="checkbox" name="" id="chk2"></div>
+            <div>I agree to the processing of my personal information for profiling such as My Credits, Follow activity , Personalised recommendations and Advertisements.</div>
+            <div><input type="checkbox" name="" id="chk3"></div>
+            <div>I wish to receive custom communications i.e. Emails, newsletters, SMS, notifications from India Today based on my interests and my activities on the website.</div>
         </div>
+         <input id="submit" type="submit" value="Sign Up">
+       
+       </form>
+       </div>
+       <div id="fields">
+        <p>*Mandatory Fields</p>
+        <p>Already Registered? <a href="">Sign in>></a></p>
+       </div>
+
+
+       <div id="footer">
+       <div>  <p>One Network one account </p></div>
+       <div>
+         <img src="https://smedia2.intoday.in/aajtak/aajtakhd/images/aajtakHd_logo.png?bypass=true" alt="">
         
-
-        <div id="main">
-            <div><img src="https://img.icons8.com/fluency/344/twitter-squared.png"  alt="" >
-                <h3>Twitter</h3>
-            </div>
-            <div> <img src="https://img.icons8.com/color/452/facebook.png " alt="">
-                <h3>Facebook</h3>
-            </div>
-            <div><img src="https://img.icons8.com/fluency/344/google-logo.png" alt="">
-              <h3>Google</h3>  
-            </div>
-            
-        </div>
-        <p>OR</p>
-        <p>Sign Up using your Email Id/Mobile No</p>
-        <form>
-            <!-- <h4>Or Sign In using your Email or Mobile no.</h4> -->
-            <div id="byemail">
-                <select name="country" id="country">
-                    <option value="country">India</option>
-                    <option value="country">Iran</option>
-                    <option value="country">Japan</option>
-                    <option value="country">Italy</option>
-                    <option value="country">Iran</option>
-                    <option value="country">Mexico</option>
-                    <option value="country">Monaco</option>
-                    <option value="country">New Zealand</option>
-                    <option value="country">Pakisthan</option>
-                    <option value="country">Nepal</option>
-                    <option value="country">Turkey</option>
-                </select>
-
-                <input id="name" type="text" placeholder="Enter Your Full Name">
-                <input id="email" type="email" placeholder="Enter Your Email/Mobile">
-                <input id="password" type="password" placeholder=" * Password">
-            </div>
-
-            <div id="checkbox">
-                <input type="checkbox" name="a">
-                <lable for="sacales">I agree to the SSO login privacy terms and I warrant that I am above 16 Years of
-                    age * </lable><br>
-                <input type="checkbox" name="b"> <label for="sacales">I agree to the processing of my personal
-                    information for profiling such as My credits,Follow activity .Personalised recommendations annd
-                    Advertisements.</label><br>
-                <input type="checkbox" name="c"><label for="sacales">I wish to receive custom communication i.e Emails
-                    newsletters,SMS ,notifications from India Today based on my interests and my activities on the
-                    websites.</label>
-            </div>
-
-            <input id="submit" type="submit" name="Sign" value="Sign Up">
-    </div>
-    <div id="forgot">
-        <div>
-            *Mandatory Fields
-        </div>
-        <div>
-
-            Already Register ? Sign in »*
-
-        </div>
+        
+        <img  src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?576" alt="">
+       
+        <img  src="https://akm-img-a-in.tosshub.com/sites/btmt/businesstoday/resources/css/images/btnav-newlogo.png?size=48:21" alt=""></div>
+      </div>
+      
 
     </div>
-    </form>
-    <div id="bottom">
-        <div>
-            <h3>One Network One Account</h3>
-        </div>
-        <div>
-            <img src="https://smedia2.intoday.in/aajtak/aajtakhd/images/aajtakHd_logo.png?bypass=true" alt="Error">
-        </div>
-        <div>
-            <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?576" alt="Error">
-        </div>
-        <div>
-            <img src="https://akm-img-a-in.tosshub.com/sites/btmt/businesstoday/resources/css/images/btnav-newlogo.png?size=48:21"
-                alt="Error">
-        </div>
-    </div>
-
+    
 </body>
-
 </html>
 
 <script>
@@ -350,5 +314,5 @@
         return true;
       }
     }
-</script>
 
+</script>
