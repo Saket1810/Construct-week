@@ -88,4 +88,14 @@ slideshow(num)
 // ----------Butons Activity-------------------
 
 
-   
+   document.querySelector("#app1").addEventListener("click",function(){
+    window.location.href="https://goo.gl/qtxzZf"
+   });
+
+   document.querySelector("#app2").addEventListener("click",function(){
+    window.location.href="https://goo.gl/BGCmrr"
+   });
+
+   document.querySelector("#app3").addEventListener("click",function(){
+    window.location.href="https://goo.gl/S8unuW"
+   });

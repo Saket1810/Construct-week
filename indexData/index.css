@@ -400,4 +400,8 @@ body{
     gap: 10px;
     margin-bottom: -20px;
 }
+#footercontext a{
+    text-decoration: none;
+    color: gray;
+}
 
