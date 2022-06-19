@@ -248,15 +248,15 @@
 #btn2{
     position: absolute;
     right: 10px;
-    top: -27px;
+    top: 20px;
     border-radius: 50%;
     background-color: black;
     color: white;
 }
 #btn1{
     position: absolute;
-    left: 270px;
-    top: -27px;
+    left: 210px;
+    top: 20px;
     border-radius: 50%;
     background-color: black;
     color: white;
