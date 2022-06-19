@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up, Your Account-India Today</title>
+    <link rel="icon" type="image/x-icon" href="https://auth.indiatoday.in/sites/all/themes/itg/favicon.ico">
+    <script src=""></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        #navbar{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 60px;
+            height: 50px;
+            /* align-items: center; */
+        }
+        #navbar p{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #navbar>div>a{
+            display: flex;
+            text-decoration: none;
+            color: #7f909f;
+            
+        }
+        #roundBtn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border: 1px solid #7f909f;
+            border-radius: 50%;
+            text-align: center;
+            margin-top: 5px;
+            color: #7f909f;
+            margin-right: 8px;
+        }
+        #container{
+            width: 600px;
+            margin: auto;
+        }
+      
+        .icons{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 40px;
+            gap: 0px;
+            /* border: 1px solid red; */
+            align-items: center;
+        }
+      
+        .icons>div{
+            width: 96%;
+
+            /* border: 1px solid red;  */
+            border-radius: 5px;
+           display: flex;
+           align-items: center;
+           color: white;
+        }
+        .icons img{
+            height: 40px;
+            /* width: 100%; */
+        }
+     
+        .tw {
+            background-color: #1daee3;
+        }
+        .fb{
+            background-color: #3b5998;
+        }
+        .gog{
+            background-color: #f1f1f1;
+            
+          
+        }
+        #goga{
+            color: black;
+        }
+        h2{
+            text-align: center;
+        }
+        hr{
+            display: inline;
+
+        }
+        
+
+    .toogle {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    background-color: #fff;
+}
+
+.toogle:after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 1px rgb(133, 125, 125);
+    position: absolute;
+    left: 0;
+    top: 25%;
+    z-index: 1;
+}
+
+.toogle>p{
+    background-color:#fbfbfb; 
+    /* Same as the parents Background */
+    width: auto;
+    display: inline-block;
+    z-index: 3;
+    padding: 0 20px 0 20px;
+    color: #85857b;
+    position: relative;
+    font-weight: lighter;
+    margin: 0;
+}
+#input{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+}
+input{
+    padding: 15px;
+    font-size: 16px;
+}
+select{
+    font-size: 16px;
+}
+#checkbox{
+    display: grid;
+    grid-template-columns: 20px 560px;
+    margin: 30px auto;
+    gap: 10px;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+    background-image: linear-gradient(#459bfc 50%, #1253bb 50%);
+    border: none;
+   height: 40px;
+   color: white;
+   font-size: 18px;
+   width: 30%;
+   border-radius: 5px;
+}
+#fields{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+#footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #e9e9e9;
+    align-items: center;
+    /* height: 60%; */
+    margin:0 auto 40px auto;
+    padding: 10px 10%;
+    font-size: 14px;
+    font-weight: 600;
+    
+}
+#footer img{
+    display: block;
+    width: 80%;
+    padding: 5px;
+    background-color: white;
+}
+#footer>div:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    /* border: 1px solid red; */
+
+}
+@media all and (max-width:768px) {
+    #input{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 20px 20px;
+    }
+    #container{
+        width: 100%;
+    }
+    select{
+        padding: 10px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <a  href=""><p id="roundBtn"><</p><p>Back to the India Today</p></a> 
+        </div>
+        <div>
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="">
+        </div>
+    </div>
+
+    <div id="container">
+       <div class="toogle"> <p> Sign Up By</p></div>
+
+       <div class="icons">
+        <div class="tw"><img src="https://img.icons8.com/fluency/344/twitter-squared.png" alt=""> Twitter</div>
+
+        <div class="fb"><img src="https://img.icons8.com/fluency/452/facebook.png" alt="">Facebook</div>
+
+        <div class="gog" id="goga"><img src="https://img.icons8.com/fluency/344/google-logo.png" alt=""> Google</div>
+       </div>
+       <h2>OR</h2>
+
+       <div class="toogle"> <p> Sign Up Using your Email Id/Mobile No.</p></div>
+
+       <div id="form">
+       <form action="">
+        <div id="input">
+        <select name="" id="selectTag">
+            <option value="India">India</option>
+            <option value="Greese">Greese</option>
+            <option value="Congo">Congo</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Russia">Russia</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Nepal">Nepal</option>
+            <option value="BanglaDesh">BanglaDesh</option>
+            <option value="China">China</option>
+            <option value="America">America</option>
+        </select>
+        <input id="name" placeholder="Enter Your Full Name" type="text">
+       
+        <input id="email" placeholder="Enter Your Email or Mobile" type="email">
+        <input id="password" placeholder="* Pasword" type="password">
+    </div>
+        <div id="checkbox">
+            <div> <input type="checkbox" name="" id="chk1"> </div>
+            <div>I agree to the <a href="http://" target="_blank" rel="noopener noreferrer">SSO login privacy terms </a> and I warrant that I am above 16 years of age. *</div>
+            <div><input type="checkbox" name="" id="chk2"></div>
+            <div>I agree to the processing of my personal information for profiling such as My Credits, Follow activity , Personalised recommendations and Advertisements.</div>
+            <div><input type="checkbox" name="" id="chk3"></div>
+            <div>I wish to receive custom communications i.e. Emails, newsletters, SMS, notifications from India Today based on my interests and my activities on the website.</div>
+        </div>
+         <input id="submit" type="submit" value="Sign Up">
+       
+       </form>
+       </div>
+       <div id="fields">
+        <p>*Mandatory Fields</p>
+        <p>Already Registered? <a href="">Sign in>></a></p>
+       </div>
+
+
+       <div id="footer">
+       <div>  <p>One Network one account </p></div>
+       <div>
+         <img src="https://smedia2.intoday.in/aajtak/aajtakhd/images/aajtakHd_logo.png?bypass=true" alt="">
+        
+        
+        <img  src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?576" alt="">
+       
+        <img  src="https://akm-img-a-in.tosshub.com/sites/btmt/businesstoday/resources/css/images/btnav-newlogo.png?size=48:21" alt=""></div>
+      </div>
+      
+
+    </div>
+    
+</body>
+</html>
+
+
+<script>
+    let form = document.querySelector("form");
+   let userData =JSON.parse(localStorage.getItem("userData"))||[] ;
+   form.addEventListener("submit",function(event){
+       event.preventDefault();
+       let data={
+           email:form.email.value,
+           password:form.password.value,
+       }
+       if(checkEmails(data.email)===true){
+           userData.push(data);
+           localStorage.setItem("userData",JSON.stringify(userData));
+           alert("Sign up Successfully");
+           window.location.href="signin.html" ;
+       } else {
+           alert("Account Already Exists");
+       }
+       
+   })
+
+   function checkEmails(email) {
+     let filtered =userData.filter(function(element){
+       return email ===element.email;
+     })
+     if(filtered.length >0)
+     {
+       return false ;
+     } else {
+       return true;
+     }
+   }
+
+</script>
