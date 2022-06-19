@@ -247,16 +247,16 @@
 }
 #btn2{
     position: absolute;
-    right: 10px;
-    top: 20px;
+    left: 36px;
+    top: 10px;
     border-radius: 50%;
     background-color: black;
     color: white;
 }
 #btn1{
     position: absolute;
-    left: 210px;
-    top: 20px;
+    left: 8px;
+    top: 10px;
     border-radius: 50%;
     background-color: black;
     color: white;
